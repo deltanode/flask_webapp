@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+<!-- HTML Head Section -->
+{% block head %} <title>User Detail</title> {% endblock %}
+
+<!-- HTML Body Section -->
+{% block body %}
+<h1>User Detail :  </h1>
+{% for user in user_list %}
+{% if user.r_num < 14 %}
+<p>
+    Roll No.: {{user.r_num}}
+    <br>
+    Name: {{ user.name }}
+</p>
+{% endif %}
+<p><a href='{{ url_for("hello", username=user.name) }}' >GO to Hello page</a></p>
+<p><a href='{{ url_for("welcome", username=user.name) }}' >GO to Welcome page</a></p>
+<hr>
+{%endfor%}
+
+
+
+{% endblock %}

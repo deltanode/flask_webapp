@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+<!-- HTML Head Section -->
+{% block head %} <title> Page Not Found</title> {% endblock %}
+
+<!-- HTML Body Section -->
+{% block body %}
+ <h1>404 Error :(</h1>
+ <p>What you were looking for is just not there.<p>
+ <a href="{{ url_for('index') }}">go somewhere nice</a>
+{% endblock %}

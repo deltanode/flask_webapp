@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+<!-- HTML Head Section -->
+{% block head %}
+<title>Flask App</title>
+{% endblock %}
+
+
+<!-- HTML Body Section -->
+{% block body %}
+<h1>Welcome</h1>
+<p>
+    <a href= {{ url_for('user') }} >user details Link1</a>
+    <br><br>
+    <a href= "/user" >user details Link 2</a>
+</p>
+{% endblock %}
